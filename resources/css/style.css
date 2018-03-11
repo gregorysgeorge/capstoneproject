@@ -1,8 +1,28 @@
 html,
 .body {
+    font-family: Lato;
     font-size: 16px;
     margin: 0 auto;
-    overflow: hidden;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color:gray;
+    transition: color, 400ms ease-in;
+    cursor: pointer;
+}
+
+
+a:active {
+    color:hsla(20, 100%, 50%, 0.822);
 }
 
 /*HEADER*/
@@ -12,7 +32,6 @@ html,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex: 0 0 auto;
     margin: 0;
     height: 5rem;
     max-width: auto;
@@ -23,6 +42,7 @@ html,
     display: flex;
     align-items: center;
     margin-left: 1.5rem;
+    cursor: pointer;
 }
 
 .title img {
@@ -49,11 +69,47 @@ html,
     margin-right: 1rem;
 }
 
+
 /*MAIN CONTENT*/
 
-main content {
-    flex: 1 1 auto;
-    position: relative; /* need this to position inner content */
-    overflow-y: auto;
+.main-content {
+    display: flex;
+    position: relative; /* need this to position inner content */ 
 }
 
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0;
+    background-color: rgba(128, 128, 128, 0.473);
+    max-width: 100%;
+}
+
+.banner-img {
+    
+    height: auto;
+}
+
+.banner-img img {
+    flex: 2;
+    width: 60%;
+    margin: 2rem 1.5rem;
+}
+
+.headline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1;
+    height: 12rem;
+    max-width: 30%;
+    background: white;
+    margin: 0 auto;
+}
+
+.headline span {
+    display: block;
+    background-color: dimgray;
+    padding: 0.5rem;
+}
