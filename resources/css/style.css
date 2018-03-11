@@ -1,0 +1,59 @@
+html,
+.body {
+    font-size: 16px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*HEADER*/
+
+/*NAVBAR*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto;
+    margin: 0;
+    height: 5rem;
+    max-width: auto;
+}
+
+/*TITLE & LOGO*/
+.title {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+.title img {
+    height: 3.5rem;
+}
+
+.title span {
+    font-size: 2rem;
+}
+
+.title span:last-child{
+    color: grey;
+}
+
+/*NAVMENU*/
+.navmenu {
+    display: flex;
+    margin-right: 0.5rem;
+}
+
+.navmenu ul li {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+/*MAIN CONTENT*/
+
+main content {
+    flex: 1 1 auto;
+    position: relative; /* need this to position inner content */
+    overflow-y: auto;
+}
+
