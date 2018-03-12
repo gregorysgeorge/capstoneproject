@@ -9,6 +9,17 @@ h2 {
     font-size: 2rem;
 }
 
+h1 {
+    font-size: 2.9rem;
+    padding-bottom: 2.2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    line-height: 1.9rem;    
+    padding-bottom: 2.2rem;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -72,44 +83,46 @@ a:active {
 
 /*MAIN CONTENT*/
 
-.main-content {
+/*BANNER&HEADLINE*/
+.banner { 
     display: flex;
-    position: relative; /* need this to position inner content */ 
+    justify-content: flex-start;
+    align-content: flex-start;
+    background-color: rgba(128, 128, 128, 0.473);
 }
 
-.banner {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    margin: 0;
-    background-color: rgba(128, 128, 128, 0.473);
-    max-width: 100%;
-}
+/*importante impostare max-width 60% nel parent e non nel child (ovvero .banner-img img), se no il child non ha limiti*/
 
 .banner-img {
-    
-    height: auto;
+    max-width: 60%;
 }
 
-.banner-img img {
-    flex: 2;
-    width: 60%;
-    margin: 2rem 1.5rem;
+.banner-img img{
+
+    /*impostato max-width:100% per contenere l'immagine nel 60% (la grandezza massima del parent) di .banner-img*/
+    max-width: 100%;
+    margin: 2rem 0rem 2rem 1.5rem;
 }
 
 .headline {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex: 1;
-    height: 12rem;
-    max-width: 30%;
-    background: white;
-    margin: 0 auto;
+    /*inserito margini anche nella headline per evitare che si sovrapponga all'immagine in fase di ridimensionamento della pagina*/
+    margin: auto auto auto 3.5rem;
+    max-width: 27%;
 }
 
 .headline span {
     display: block;
-    background-color: dimgray;
-    padding: 0.5rem;
+    color: white; 
+    background-color: rgb(70, 70, 70);
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.headline a{
+    color: white;
+}
+
+.headline a:hover{
+    color: grey;
 }
