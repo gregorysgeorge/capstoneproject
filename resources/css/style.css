@@ -2,6 +2,7 @@ html,
 .body {
     font-family: Lato;
     font-size: 16px;
+    color:#494949;
     margin: 0 auto;
 }
 
@@ -22,12 +23,12 @@ h3 {
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(70, 70, 70)
 }
 
 a:hover {
-    color:gray;
-    transition: color, 400ms ease-in;
+    color:rgba(128, 128, 128, 0.699);
+    transition: color, 200ms ease-in;
     cursor: pointer;
 }
 
@@ -88,22 +89,23 @@ a:active {
     display: flex;
     justify-content: flex-start;
     align-content: flex-start;
-    background-color: rgba(128, 128, 128, 0.473);
+    background-color: #d9d9d9;
 }
 
 /*importante impostare max-width 60% nel parent e non nel child (ovvero .banner-img img), se no il child non ha limiti*/
 
+/*BANNER IMAGE*/
 .banner-img {
-    max-width: 60%;
+    max-width: 56.35%;
 }
 
 .banner-img img{
-
     /*impostato max-width:100% per contenere l'immagine nel 60% (la grandezza massima del parent) di .banner-img*/
     max-width: 100%;
     margin: 2rem 0rem 2rem 1.5rem;
 }
 
+/*HEADLINE - "learn something new"*/
 .headline {
     /*inserito margini anche nella headline per evitare che si sovrapponga all'immagine in fase di ridimensionamento della pagina*/
     margin: auto auto auto 3.5rem;
@@ -126,3 +128,116 @@ a:active {
 .headline a:hover{
     color: grey;
 }
+
+/*articles section*/
+
+/*macro container*/
+.articles {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin: 0 auto;
+}
+
+/*main article on the left*/
+.mainarticle {
+    max-width: 56.35%;
+}
+
+.mainarticle img {
+    max-width: 100%;
+    padding: 2rem 0rem 2rem 1.5rem;
+}
+
+.mainarticle h1, h5, h6{
+    margin: 0 0 0 1.4rem;
+}
+
+.mainarticle h5 {
+    font-size: 1.3rem;
+    line-height: 1.8rem; 
+    text-align: left;
+}
+
+.mainarticle h5 {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: justify;
+}
+
+.name {
+    padding-top: 2rem;
+    font-size: 1rem;
+}
+
+/*sidebar right with articles*/
+
+.sidearticles {
+    max-width: 40%;
+    margin: 0rem auto auto 3rem;
+    padding-bottom: 4rem;
+    border-left: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.sidearticles img {
+    padding: 1.2rem;
+    width: 35%;
+    height: auto;
+}
+
+.article {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.article:hover {
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+/*sidebar right - description and info*/
+.content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: flex-start;
+    max-width: 45%;
+}
+
+.content h3 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    padding-bottom: 0;
+}
+
+.content p {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    padding-bottom: 0;
+}
+
+.content a {
+    line-height: 3rem;
+    color: #5598e5;
+}
+
+.content a:hover {
+    color: #0278ff;
+}
+
+/*first article on the sidebar*/
+#top {
+    padding-top: 0.8rem;
+}
+
+/*last article on the sidebar*/
+#bottom {
+    border-bottom: 0;
+}
+
+
+
+
