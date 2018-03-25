@@ -244,24 +244,59 @@ a:active {
 .section {
     position: relative;
     margin: 0 auto;
+    padding-bottom: 2rem;
+    background-color: #d9d9d9;
+}
+
+.section h2{
+    position: relative;
+    text-align: center;
+    padding: 2rem 0;
 }
 
 .startlearning {
     display: flex;
     flex-direction: row;
-    flex-basis: 100%;
+    flex-basis: 100%;   
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    align-items: center;
-    margin: 0 2.5rem;
+    padding: 0rem 4.5rem;
+    margin: 0 auto;
 }
 
 .course {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    margin: 0 auto 0.8rem auto;
+    max-width: 32%;
+    height: 100%;
+}
+
+.course img {
+    max-width: 100%;
     height: auto;
+}
+
+.course-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1.5rem 1rem;
+    background-color: white;
+    max-width: 100%;
+    height: 7rem;
+}
+
+.course-content h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+.course-content p {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    line-height: 1.4rem;
+}
 
 
 
