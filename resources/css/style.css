@@ -28,13 +28,13 @@ a {
 
 a:hover {
     color:rgba(128, 128, 128, 0.699);
-    transition: color, 200ms ease-in;
+    transition: color, 400ms;
     cursor: pointer;
 }
 
 
 a:active {
-    color:hsla(20, 100%, 50%, 0.822);
+    color:#5598e5;
 }
 
 /*HEADER*/
@@ -49,12 +49,19 @@ a:active {
     max-width: auto;
 }
 
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .navbar {
+        height: 4rem;
+    }
+}
+
 /*TITLE & LOGO*/
 .title {
     display: flex;
     align-items: center;
     margin-left: 1.5rem;
-    cursor: pointer;
+    cursor: default;
 }
 
 .title img {
@@ -69,10 +76,22 @@ a:active {
     color: grey;
 }
 
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .title {
+        display: none;
+    }
+}
+
+
 /*NAVMENU*/
 .navmenu {
     display: flex;
     margin-right: 0.5rem;
+}
+
+.navmenu2 {
+    display: none;
 }
 
 .navmenu ul li {
@@ -81,6 +100,43 @@ a:active {
     margin-right: 1rem;
 }
 
+/*MOBILE*/
+@media screen and (min-width: 641px) and (max-width: 864px) {
+    .navmenu {
+        display: none;
+    }
+
+    .navmenu2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navmenu2 ul li {
+        display: inline-block;
+        padding: 0 4rem 0 4rem;
+    }
+}
+
+/*MOBILE*/
+@media screen and (max-width: 640px) {
+    .navmenu {
+        display: none;
+    }
+
+    .navmenu2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navmenu2 ul li {
+        display: inline-block;
+        padding: 0 1.8rem 0 1.8rem;
+    }
+}
 
 /*MAIN CONTENT*/
 
@@ -90,11 +146,24 @@ a:active {
     justify-content: flex-start;
     align-content: flex-start;
     background-color: #d9d9d9;
+    cursor: default;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .banner { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: column;
+        align-content: center;
+        width: 100%;
+        padding-bottom: 4rem;
+    }
 }
 
 /*BANNER IMAGE*/
 .banner-img {
-    max-width: 65%;
+    max-width: 60%;
 }
 
 .banner-img img{
@@ -102,10 +171,34 @@ a:active {
     margin: 2rem 0rem 2rem 1.5rem;
 }
 
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .banner-img {
+        max-width: 100%;
+    }
+    
+    .banner-img img{
+        max-width: 100%;
+        height: auto;
+        margin: auto auto 2.5rem auto;
+    }
+}
+
 /*HEADLINE - "learn something new"*/
 .headline {
-    margin: auto auto auto 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
     max-width: 27%;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .headline {
+        margin: 0 auto;
+        max-width: 80%;
+    }
 }
 
 .headline span {
@@ -125,6 +218,18 @@ a:active {
     color: grey;
 }
 
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    headline span {
+        display: flex;
+        align-self: center;
+        color: white; 
+        background-color: rgb(70, 70, 70);
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
 /*articles section*/
 
 /*macro container*/
@@ -138,7 +243,8 @@ a:active {
 /*main article on the left*/
 .mainarticle {
     position: relative;
-    max-width: 65%;
+    max-width: 60%;
+    cursor: default;
 }
 
 .mainarticle img {
@@ -162,14 +268,26 @@ a:active {
     margin-bottom: 2rem;
 }
 
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .mainarticle {
+        display: none;
+    }
+}
+
 /*RIGHT SIDEBAR with articles*/
 
 .sidearticles {
-    max-width: 40%;
+    max-width: 30%;
     margin: 0rem auto auto 3rem;
     margin-bottom: 0rem;
     border-left: 1px solid rgba(128, 128, 128, 0.2);
 }
+
+.sidearticles2 {
+    display: none;
+}
+
 
 .sidearticles img {
     padding: 1.2rem;
@@ -182,7 +300,6 @@ a:active {
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 }
 
 .article:hover {
@@ -190,13 +307,60 @@ a:active {
     cursor: pointer;
 }
 
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .sidearticles {
+        display: none;
+    }
+    
+    .sidearticles2 {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+        margin: auto;
+        width: 100%;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .articleimage {
+        max-width: 100%;
+    }
+
+    .sidearticles2 img {
+        display: flex;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .article:hover {
+        background: none;
+        cursor: default;
+    }
+
+    .articleimage:hover {
+        opacity: 0.8;
+        transition: opacity, 200ms;
+        cursor: pointer;
+    }
+}
+
+
+
 /*RIGHT SIDEBAR - description and info*/
 .content {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-self: flex-start;
     align-items: flex-start;
-    max-width: 45%;
+    max-width: 100%;
 }
 
 .content h3 {
@@ -220,6 +384,36 @@ a:active {
     color: #0278ff;
 }
 
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .content {
+        display: flex;
+        align-content: flex-start;
+        align-items: flex-start;
+        padding-top: 1rem;
+        margin-left: 1rem;
+        padding-bottom: 1rem;
+        width: 80%;
+    }
+
+    .content h3 {
+        display: flex;
+        align-content: flex-start;
+        line-height: 2rem;
+    }
+    
+    .content p {
+        display: flex;
+        line-height: 2rem;
+        
+    }
+    
+    .content a {
+        display: flex;
+        line-height: 2rem;
+    }
+}
+
 /*first article on the sidebar*/
 #top {
     padding-top: 0.8rem;
@@ -230,17 +424,23 @@ a:active {
     border-bottom: 0;
 }
 
+
 /*START LEARNING SECTION*/
 
 .section {
     margin: 0 auto;
     padding-bottom: 2rem;
     background-color: #d9d9d9;
+    cursor: default;
 }
 
 .section h2{
     text-align: center;
     padding: 2rem 0;
+}
+
+.section2 {
+    display: none;
 }
 
 .startlearning {
@@ -254,18 +454,71 @@ a:active {
     margin: 0 auto;
 }
 
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    
+    .section {
+        display: none;
+    }
+    
+    .section2 {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+        max-width: 100%;
+    }
+
+    .section2 h2{
+        padding: 2rem;
+    }
+
+    .startlearning2 {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 100%;
+    }
+
+    .course-content2 {
+        align-self: center;
+        padding: 1rem;
+        width: 115%;
+        cursor: pointer;
+    }
+
+    .course-content2:hover {
+        opacity: 0.8;
+        transition: opacity, 200ms;
+    }
+
+    .course-content2 h3{
+        display: block;
+        background-color: rgba(70, 70, 70, 0.288);
+        padding: 1.5rem 2rem;
+        text-align: left;
+        font-size: 1.3rem;
+    }
+}
+
 .course {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0 auto 0.8rem auto;
     max-width: 32%;
-    height: 100%;
+    height: 100%
 }
 
 .course img {
     max-width: 100%;
     height: auto;
+}
+
+.course img:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .course-content {
@@ -278,13 +531,24 @@ a:active {
 }
 
 .course-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-bottom: 1rem;
 }
+
+.course span {
+    font-size: 0.9rem;
+}
 .course-content p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding-top: 0.5rem;
     line-height: 1.4rem;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .course-content {
+        display: none;
+    }
 }
 
 /* THESIS SECTION */
@@ -292,6 +556,11 @@ a:active {
 
 .thesis-section {
     margin: 0 auto;
+    cursor: default;
+}
+
+.thesis-section2 {
+    display: none;
 }
 
 .thesis-section h2 {
@@ -308,7 +577,7 @@ a:active {
 
 .video {
     position: relative;
-    max-width: 65%;
+    max-width: 60%;
 }
 
 .video video {
@@ -329,6 +598,32 @@ a:active {
     margin-bottom: 2rem;
 }
 
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    .thesis-section {
+        display: none;
+    }
+    
+    .thesis-section2 {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        
+    }
+
+    .thesis-section2 h2{
+       padding: 2rem 0;
+    }
+
+    .video2 video{
+        display: flex;
+        align-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+}
+
 /*SIDEBAR RGHT with articles*/
 
 .thesis-sidebar {
@@ -338,7 +633,7 @@ a:active {
 
 .thesis-sidebar img {
     padding: 1rem;
-    width: 35%;
+    width: 30%;
     height: auto;
 }
 
@@ -410,4 +705,19 @@ footer {
     display: inline-block;
     font-size: 1.2rem;
     margin-right: 1rem;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 864px) {
+    footer {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+        height: auto;
+        border-top: none;
+    }
+
+    .footer-menu ul li {
+        display: none;
+    }
+
 }
